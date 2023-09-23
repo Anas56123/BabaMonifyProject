@@ -16,7 +16,6 @@
         let pie12 = document.getElementById("Pie12")
         let pie13 = document.getElementById("Pie13")
         let pie14 = document.getElementById("Pie14")
-        
 
         let foodButton = document.getElementById("foodButton")
         let transportButton = document.getElementById("transportButton")
