@@ -1,0 +1,184 @@
+@property --p{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 3;
+  }
+  :root{
+    --p101:0;
+    --p102:0;
+    --p103:0;
+    --p104:0;
+    --p105:0;
+    --p106:0;
+    --p107:0;
+    --p108:0;
+    --p109:0;
+    --p1010:0;
+    --p1011:0;
+    --p1012:0;
+    --p1013:0;
+    --p1014:0;
+  }
+  body{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: sans-serif;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: 200px 275px 275px 200px;
+    grid-template-rows: 200px 200px 200px 200px 200px;
+  }
+  .pies{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+  }
+  .h1{
+    font-size: 50px;
+  }
+  .pie {
+    --p:var(--p100);
+    --b:100px;
+    --c:rgb(255, 195, 56);
+    --w:500px;
+  
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    margin: 5px;
+    place-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: sans-serif;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .pie:before,
+  .pie:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+  }
+  .pie:before {
+    inset: 0;
+    background:
+      radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+      conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            mask: radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+  }
+  .pie:after {
+    inset: calc(50% - var(--b)/2);
+    background: var(--c);
+    transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+  }
+  .animate {
+    animation: p 1s .5s both;
+  }
+  .no-round:before {
+    background-size: 0 0, auto;
+  }
+  .no-round:after {
+    content: none;
+  }
+  @keyframes p{
+    from{--p:0}
+  }
+  #foodButton{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  #transportButton{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  #carButton{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  #houseButton{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  #healthButton{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  #giftsButton{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  #callsButton{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  #sportsButton{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  #animalButton{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  #eatingOutButton{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  #billsButton{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  #clothesButton{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  #entertaimentButton{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  #toistyButton{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  button{
+    font-size: 25px;
+    background-color: white;
+    border: 0rem;
+    cursor: pointer;
+  }
