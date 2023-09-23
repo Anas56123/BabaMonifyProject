@@ -1,6 +1,7 @@
 //Var
     //CSS
         var root = document.querySelector(':root');
+        var rs = getComputedStyle(root);
     //HTML
         let pie1 = document.getElementById("Pie1")
         let pie2 = document.getElementById("Pie2")
@@ -47,88 +48,117 @@
         let entertaimentInnerHTML = document.getElementById("entertaimentInnerHTML")
         let toistyInnerHTML = document.getElementById("toistyInnerHTML")
     //JS
-        let food = 0
-        let transport = 0
-        let car = 0
-        let house = 0
-        let health = 0
-        let gifts = 0
-        let calls = 0
-        let sports = 0
-        let animal = 0
-        let eatingOut = 0
-        let bills = 0
-        let clothes = 0
-        let entertaiment = 0
-        let toisty = 0
+        let total = 0
+        const listOf0P = {
+            food :{
+                index : 0,
+                perc: 10,
+                name: "food"
+            },
+            transport :{
+                index : 0,
+                perc: 50,
+                name: "transport"
+            },
+            car :{
+                index : 0,
+                perc: 10,
+                name: "transport"
+            },
+            house :{
+                index : 0,
+                perc: 10,
+                name: "transport"
+            },
+            health :{
+                index : 0,
+                perc: 10,
+            },
+            gifts :{
+                index : 0,
+                perc: 10,
+                name: "transport"
+            },
+
+            calls :{
+                index : 0,
+                perc: 10,
+                name: "transport"
+            },
+            sports :{
+                sports : 0,
+                index : 0,
+                perc: 10,
+
+            },
+            animal :{
+                index : 0,
+                perc: 10,
+                name: "transport"
+            },
+            eatingOut :{
+                index : 0,
+                perc: 10,
+                name: "transport"
+
+            },
+            bills :{
+                index : 0,
+                perc: 10,
+                name: "transport"
+
+            },
+            clothes :{
+                index : 0,
+                perc: 10,
+                name: "transport"
+            },
+            entertaiment :{
+                index : 0,
+                perc: 10,
+                name: "transport"
+            },
+            toisty :{
+                index : 0,
+                perc: 10,
+                name: "toisty"
+            },
+        }
+        let listOfPercentages = []
 //Functions
+console.log(typeof listOfObject)
+    function change_value(obj,cssProp){
+        var sum = 0
+        for(var i = 0; i < listOfPercentages.length; i++) {
+            sum += listOfPercentages[i].perc
+            var currentPerc = listOfPercentages[i]
+            listOfPercentages[i] = {
+                perc: currentPerc.perc,
+                index: currentPerc.index + 1
+            }
+        }
+        console.log("the sym is "+sum)
+
+        listOfPercentages.push({
+            perc: sum + obj.perc,
+            index: 0
+        })
+        cssProp
+        var lastIndex = listOfPercentages.length
+        console.log(listOfPercentages[lastIndex-1])
+        console.log(cssProp)
+
+
+        root.style.setProperty(cssProp,listOfPercentages[lastIndex-1]);
+
+    }
+
     function change_value_for_food(){
-        foodInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p101', 10);
+        change_value(listOf0P.food,'--p101')
     }
     foodButton.addEventListener('click',change_value_for_food)
     function change_value_for_transport(){
-        transportInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p102', 10);
+        change_value(listOf0P.transport,'--p102')
+
     }
     transportButton.addEventListener('click',change_value_for_transport)
-    function change_value_for_car(){
-        carInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p103', 10);
-    }
-    carButton.addEventListener('click',change_value_for_car)
-    function change_value_for_house(){
-        houseInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p104', 10);
-    }
-    houseButton.addEventListener('click',change_value_for_house)
-    function change_value_for_health(){
-        healthInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p105', 10);
-    }
-    healthButton.addEventListener('click',change_value_for_health)
-    function change_value_for_gifts(){
-        giftsInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p106', 10);
-    }
-    giftsButton.addEventListener('click',change_value_for_gifts)
-    function change_value_for_calls(){
-        callsInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p107', 10);
-    }
-    callsButton.addEventListener('click',change_value_for_calls)
-    function change_value_for_sports(){
-        sportsInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p108', 10);
-    }
-    sportsButton.addEventListener('click',change_value_for_sports)
-    function change_value_for_animal(){
-        animalInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p109', 10);
-    }
-    animalButton.addEventListener('click',change_value_for_animal)
-    function change_value_for_eatingOut(){
-        eatingOutInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p1010', 10);
-    }
-    eatingOutButton.addEventListener('click',change_value_for_eatingOut)
-    function change_value_for_bills(){
-        billsInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p1011', 10);
-    }
-    billsButton.addEventListener('click',change_value_for_bills)
-    function change_value_for_clothes(){
-        clothesInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p1012', 10);
-    }
-    clothesButton.addEventListener('click',change_value_for_clothes)
-    function change_value_for_entertaiment(){
-        entertaimentInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p1013', 10);
-    }
-    entertaimentButton.addEventListener('click',change_value_for_entertaiment)
-    function change_value_for_toisty(){
-        toistyInnerHTML.innerHTML+=10+'%'
-        root.style.setProperty('--p1014', 10);
-    }
-    toistyButton.addEventListener('click',change_value_for_toisty)

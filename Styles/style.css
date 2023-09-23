@@ -42,7 +42,6 @@
     font-size: 50px;
   }
   .pie {
-    --p:var(--p100);
     --b:100px;
     --c:rgb(255, 195, 56);
     --w:500px;
