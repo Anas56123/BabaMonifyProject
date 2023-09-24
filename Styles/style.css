@@ -1,183 +1,93 @@
-@property --p{
-  syntax: '<number>';
-  inherits: true;
-  initial-value: 3;
-}
-:root{
-  --p101:0;
-  --p102:0;
-  --p103:0;
-  --p104:0;
-  --p105:0;
-  --p106:0;
-  --p107:0;
-  --p108:0;
-  --p109:0;
-  --p1010:0;
-  --p1011:0;
-  --p1012:0;
-  --p1013:0;
-  --p1014:0;
-}
-body{
-  background-color: rgb(255, 255, 255);
+body {
+  font-family: Arial, sans-serif;
   text-align: center;
-  font-family: sans-serif;
 }
-.container{
-  display: grid;
-  grid-template-columns: 200px 275px 275px 200px;
-  grid-template-rows: 200px 200px 200px 200px 200px;
-}
-.pies{
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: 200px 200px;
-  grid-template-rows: 200px 200px;
-}
-.h1{
-  font-size: 50px;
-}
-.pie {
-  --b:100px;
-  --c:rgb(255, 195, 56);
-  --w:500px;
 
-  width: var(--w);
-  aspect-ratio: 1;
-  position: relative;
-  display: inline-grid;
-  margin: 5px;
-  place-content: center;
-  font-size: 50px;
-  font-weight: bold;
-  font-family: sans-serif;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
+.chart-container {
+  width: 80%;
+  margin: 20px auto;
 }
-.pie:before,
-.pie:after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
+
+.chart {
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 10px;
 }
-.pie:before {
-  inset: 0;
-  background:
-    radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
-    conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
-  -webkit-mask: radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
-          mask: radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+
+.bar {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 200px; /* Adjust the width of the bars as needed */
 }
-.pie:after {
-  inset: calc(50% - var(--b)/2);
-  background: var(--c);
-  transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+
+.bar-segment {
+  height: 20px;
+  transition: height 1s ease-in-out;
 }
-.animate {
-  animation: p 1s .5s both;
+
+#bar1{
+  background-color: #3498db; 
 }
-.no-round:before {
-  background-size: 0 0, auto;
+
+#bar2{
+  background-color: #ff0000; 
 }
-.no-round:after {
-  content: none;
+
+#bar3{
+  background-color: #d0db34; 
 }
-@keyframes p{
-  from{--p:0}
+
+#bar4{
+  background-color: #00ff48; 
 }
-#foodButton{
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 5;
-  grid-row-end: 6;
+
+#bar5{
+  background-color: #000000; 
 }
-#transportButton{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 4;
+
+#bar6{
+  background-color: #9500ff; 
 }
-#carButton{
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 3;
-  grid-row-end: 4;
+
+#bar7{
+  background-color: #878787; 
 }
-#houseButton{
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
+
+#bar8{
+  background-color: #ff7b00; 
 }
-#healthButton{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 5;
-  grid-row-end: 6;
+
+#bar9{
+  background-color: #83aac4; 
 }
-#giftsButton{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 4;
-  grid-row-end: 5;
+
+#bar10{
+  background-color: #2d00a9; 
 }
-#callsButton{
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 4;
-  grid-row-end: 5;
+
+#bar11{
+  background-color: #d4d4d4; 
 }
-#sportsButton{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
+
+#bar12{
+  background-color: #00ffbb; 
 }
-#animalButton{
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 5;
-  grid-row-end: 6;
+
+#bar13{
+  background-color: #7f773a; 
 }
-#eatingOutButton{
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
+
+#bar14{
+  background-color: #7c2c00; 
 }
-#billsButton{
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 5;
-  grid-row-end: 6;
+#bar1_1{
+  background-color: #3498db; 
 }
-#clothesButton{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
+
+#bar2_1{
+  background-color: #ff0000; 
 }
-#entertaimentButton{
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-#toistyButton{
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-button{
-  font-size: 25px;
-  background-color: white;
-  border: 0rem;
-  cursor: pointer;
+
+#bar3_1{
+  background-color: #d0db34; 
 }
