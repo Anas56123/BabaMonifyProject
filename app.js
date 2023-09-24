@@ -63,60 +63,61 @@
             car :{
                 index : 0,
                 perc: 10,
-                name: "transport"
+                name: "car"
             },
             house :{
                 index : 0,
                 perc: 10,
-                name: "transport"
+                name: "house"
             },
             health :{
                 index : 0,
                 perc: 10,
+                name: "health"
             },
             gifts :{
                 index : 0,
                 perc: 10,
-                name: "transport"
+                name: "gifts"
             },
 
             calls :{
                 index : 0,
                 perc: 10,
-                name: "transport"
+                name: "calls"
             },
             sports :{
-                sports : 0,
                 index : 0,
                 perc: 10,
+                name: "sports"
 
             },
             animal :{
                 index : 0,
                 perc: 10,
-                name: "transport"
+                name: "animal"
             },
             eatingOut :{
                 index : 0,
                 perc: 10,
-                name: "transport"
+                name: "eatingOut"
 
             },
             bills :{
                 index : 0,
                 perc: 10,
-                name: "transport"
+                name: "bills"
 
             },
             clothes :{
                 index : 0,
                 perc: 10,
-                name: "transport"
+                name: "clothes"
             },
             entertaiment :{
                 index : 0,
                 perc: 10,
-                name: "transport"
+                name: "entertaiment"
             },
             toisty :{
                 index : 0,
