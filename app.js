@@ -31,3 +31,32 @@ var bar1_1 = document.getElementById('bar1_1')
 var bar2_1 = document.getElementById('bar2_1')
 
 var bar3_1 = document.getElementById('bar3_1')
+const calculatorBtn = document.getElementById("calculatorBtn");
+const calculator = document.getElementById("calculator");
+const display = document.getElementById("display");
+
+function appendToDisplay(value) {
+    display.value += value;
+}
+
+function clearDisplay() {
+    display.value = "";
+}
+
+function calculateResult() {
+    try {
+        display.value = eval(display.value);
+    } catch (error) {
+        display.value = "Error";
+    }
+}
+
+calculatorBtn.addEventListener("click", function () {
+    calculator.style.display = "block";
+});
+
+calculator.addEventListener("click", function (e) {
+    if (e.target === calculator) {
+        calculator.style.display = "none";
+    }
+});
